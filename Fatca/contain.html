@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contain page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <!--navigation-->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <h6 style="text-indent: 100px;">Serch for Reportable Data ....</h6>
+          <a href = "index.html">
+          <button type="button" class="btn btn-outline-secondary" style="margin-right: 100px;">Log off</button>
+          </a>
+        </div>
+    </nav>
+
+  <style>
+    .center {
+      margin: auto;
+      border-style: groove;
+      width: 1500px;
+      height: 700px;
+    }
+  </style>
+
+  
+  <div class="center"> 
+    <div class = "row justify-content-evenly pt-5 pb-5">
+
+      <!--first part-->
+
+        <div class ="col-md-3 pt-5">
+           List of PAS system in FACTA
+            <div class="form-check pt-4 pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Conventional
+              </label>
+            </div>
+            <div class="form-check pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Flexcube - Wealth
+              </label>
+            </div>
+            <div class="form-check pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Flexcube - OMUT
+              </label>
+            </div>
+            <div class="form-check pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Flexi
+              </label>
+            </div>
+            <div class="form-check pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Omega 2
+              </label>
+            </div>
+            <div class="form-check pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Omega 3
+              </label>
+            </div>
+            <div class="form-check pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                RPS
+              </label>
+            </div>
+
+            <button type="button" class="btn btn-outline-dark" onclick="message()">Search</button>
+        </div>
+
+        <!--second part-->
+      
+        <div class ="col-md-3 pt-5">
+          <form action=method="post">
+            Date Range
+            <div class="pt-3">
+            <input type="date" name="" value="">
+            </div>
+          </form>
+        </div>
+         
+
+        <!--Third part-->
+        <div class ="col-md-3 pt-5">
+            Reportable Status
+
+            <div class="form-check pt-4 pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Reportable
+              </label>
+            </div>
+            <div class="form-check pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Not Reportable
+              </label>
+            </div>
+            <div class="form-check pb-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Possibly Reportable
+              </label>
+            </div>
+
+            <div class="border border-dark-subtle pt-2" style="width: 350px;">
+              <p style="text-align: center;">Party Search</p>
+              
+              <div class="form-check pb-2" style="margin: 8px;">
+                <input class="form-check-input"  type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label " for="flexCheckDefault">
+                  Person
+                </label>
+              </div>
+
+              <div class="form-check pb-2" style="margin: 8px;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Entity
+                </label>
+              </div>
+
+              <div class="pt-2 pb-4" >
+                <label for="id" style="padding: 8px;" >ID</label>
+                <input type="number" name="firstname" id="firstname", required>
+            </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+  </div>
+
+    <script src ="contain.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  
+  </body>
+</html>
