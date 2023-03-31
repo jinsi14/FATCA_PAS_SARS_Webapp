@@ -21,7 +21,7 @@ const Login = props => {
                     <input
                     class="form-control me-2"
                     id="pass_word"
-                    ype="password"
+                    type="password"
                     placeholder="Password"
                     equired
                     />
