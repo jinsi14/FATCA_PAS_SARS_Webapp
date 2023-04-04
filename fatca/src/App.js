@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter , Routes, Route} from "react-router-dom";
+import ReactDom from 'react-dom/client';
+import Search from './components/Search';
+import Contain from './components/Contain';
 import Login from './components/Login';
 
 function App() {
@@ -20,7 +24,17 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-    <Login></Login>
+    
+    //<Login></Login>
+
+
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element ={<Login />} />
+      <Route path='/search' element={<Search />} />
+      <Route path='/contain' element={<Contain />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
