@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = props => {
 
-    const loginNavigate = useNavigate();
-    const handleLoginClick = props => {
-        loginNavigate("/search");
+    const[enteredUsername, setEnteredUsername] = useState('');
+    const[enteredPassword, setEnteredPassword] = useState('');
+
+    const usernameChangeHandler = (event) => {
+        setEnteredUsername(event.target.value);
+    };
+
+    const passwordChnageHandler =(event) => {
+        setEnteredPassword(event.target.value);
     }
 
+    const loginNavigate = useNavigate();
+    const handleLoginClick = (event) => {
+        event.preventDefault();
+
+        if(enteredUsername.trim().length < 2 ){
+            alert("invalid username");
+            return;
+        }
+         if (enteredPassword.trim().length < 5)
+         {
+            alert("password must be more than 5 characters");
+            return;
+         }
+        loginNavigate("/search");
+    }
+    
     return (
     <div>
         <div>
@@ -15,12 +37,13 @@ const Login = props => {
                 <div className="container-fluid">
                 <button type="button" className="btn btn-outline-secondary">Home</button>
         
-                <form className="d-flex">
+                <form onSubmit ={handleLoginClick} className="d-flex">
                     <input
                     className="form-control me-2"
                     id="user_name"
                     type="text"
                     placeholder="UserName"
+                    onChange={usernameChangeHandler}
                     required
                     />
     
@@ -29,10 +52,11 @@ const Login = props => {
                     id="pass_word"
                     type="password"
                     placeholder="Password"
+                    onChange={passwordChnageHandler}
                     required
                     />
 
-                    <button onClick={handleLoginClick} type="submit" className="btn btn-outline-secondary">Login</button>
+                    <button  type="submit" className="btn btn-outline-secondary">Login</button>
                 </form>
                 </div>
             </nav>
