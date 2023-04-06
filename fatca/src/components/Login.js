@@ -5,6 +5,7 @@ const Login = props => {
 
     const[enteredUsername, setEnteredUsername] = useState('');
     const[enteredPassword, setEnteredPassword] = useState('');
+    localStorage.setItem("Name", enteredUsername);
 
     const usernameChangeHandler = (event) => {
         setEnteredUsername(event.target.value);

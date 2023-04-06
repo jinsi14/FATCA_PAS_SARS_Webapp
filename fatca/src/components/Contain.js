@@ -1,4 +1,5 @@
 import React from "react";
+import Classes from'./Contain.module.css';
 import { useNavigate } from "react-router-dom";
 
 const Contain = props => {
@@ -16,12 +17,13 @@ const Contain = props => {
         <div>
             <nav className="navbar bg-body-tertiary">
                 <div className="container-fluid">
-                  <h6>Serch for Reportable Data ....</h6>
-                  <button onClick={handleLogoffClick} type="button" className="btn btn-outline-secondary" >Log off</button>
+                  <h6 style={{"text-indent" :"100px"}}>Serch for Reportable Data ....</h6>
+                  <button onClick={handleLogoffClick} type="button" className="btn btn-outline-secondary" style={{"margin-right" :"100px"}}>Log off</button>
                 </div>
             </nav>
+
             
-            <div className="center">
+            <div className={Classes.center}>
                 <div className= "row justify-content-evenly pt-5 pb-5">
 
 
@@ -108,17 +110,17 @@ const Contain = props => {
                     </label>
                   </div>
 
-                  <div className="border border-dark-subtle pt-2">
-                    <p>Party Search</p>
+                  <div className="border border-dark-subtle pt-2" style={{"width" : "350px"}}>
+                    <p style={{"text-align":"center"}}>Party Search</p>
 
-                    <div className="form-check pb-2">
+                    <div className="form-check pb-2" style={{"margin":"8px"}}>
                         <input className="form-check-input"  type="checkbox" value="" id="flexCheckDefault" />
                         <label className="form-check-label " htmlFor="flexCheckDefault">
                         Person
                         </label>
                     </div>
 
-                    <div className="form-check pb-2">
+                    <div className="form-check pb-2" style={{"margin":"8px"}}>
                         <input className="form-check-input"  type="checkbox" value="" id="flexCheckDefault" />
                         <label className="form-check-label " htmlFor="flexCheckDefault">
                         Entity
@@ -126,7 +128,7 @@ const Contain = props => {
                     </div>
 
                     <div className="pt-2 pb-4">
-                        <label htmlFor="id" >ID</label>
+                        <label htmlFor="id" style={{"padding":"8px"}}>ID</label>
                         <input type="number" name="firstname" id="firstname" required />
                     </div>
                   </div>

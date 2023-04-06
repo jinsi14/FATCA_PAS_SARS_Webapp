@@ -18,8 +18,8 @@ const Search = (props) => {
           <nav className="navbar bg-body-tertiary">
             <div className="container-fluid">
 
-              <h6 >Well come to the FATCA Reporting System : </h6>
-                <button onClick={handleLogoffClick} type="button" className="btn btn-outline-secondary">Log off</button>
+              <h6 style={{"margin-left": "150px"}}>Well come to the FATCA Reporting System : {localStorage.getItem('Name')} </h6>
+                <button onClick={handleLogoffClick} type="button" className="btn btn-outline-secondary" style={{"margin-right": "100px"}}>Log off</button>
             </div>
           </nav>
 
